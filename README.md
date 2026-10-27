@@ -1,6 +1,15 @@
-# Accounting Module - End-to-End Prototype
-Upload all contents to the root of the GitHub repository `Accounting-Module`.
+# Secure Accounting ERP Foundation
 
-Included: dashboard, invoice search/create, receipt search/create, bank accounts, EOI/booking, receipt allocation, refunds, cancellations, development costs, supplier payments, escrow transfers, IFRS 15 revenue recognition, handover/control transfer, journal register and chart of accounts.
+This package replaces public browser-only storage with Supabase Authentication and PostgreSQL tables.
 
-Accounting logic follows the supplied Off-Plan Real Estate Developer Accounting Reference. This is a functional prototype: posting/approval buttons do not persist data to a backend.
+## Setup
+1. Create a Supabase project.
+2. Run `supabase/migrations/002_secure_erp.sql` in SQL Editor.
+3. Create the first administrator in Authentication > Users.
+4. Add that user's row to `user_profiles` with a generated `USR-2026-xxxxxx` code and ADMIN role.
+5. Update `config/supabase-config.js` with the project URL and publishable anon key.
+6. Upload to GitHub Pages.
+
+Never use a Supabase service-role key in frontend code. The publishable key is protected by Authentication and RLS.
+
+All ERP business records use database-generated read-only codes: Customer Code, Supplier Code, Bank Account Code, Invoice Code, Receipt Code, AP Invoice Code, Refund Code, Journal Code and Approval Code.
