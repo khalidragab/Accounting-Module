@@ -1,11 +1,6 @@
-# Accounting Module
-Upload every file and folder in this package to the root of the GitHub repository named `Accounting-Module`.
+# Accounting Module - End-to-End Prototype
+Upload all contents to the root of the GitHub repository `Accounting-Module`.
 
-Pages:
-- `/` Dashboard
-- `/invoices/` Invoice search
-- `/invoice-create/` Invoice creation
-- `/receipts/` Receipt search
-- `/receipt-create/` Receipt creation
+Included: dashboard, invoice search/create, receipt search/create, bank accounts, EOI/booking, receipt allocation, refunds, cancellations, development costs, supplier payments, escrow transfers, IFRS 15 revenue recognition, handover/control transfer, journal register and chart of accounts.
 
-After upload, enable GitHub Pages under Settings > Pages > Deploy from a branch > main > /(root).
+Accounting logic follows the supplied Off-Plan Real Estate Developer Accounting Reference. This is a functional prototype: posting/approval buttons do not persist data to a backend.
